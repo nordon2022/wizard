@@ -11,7 +11,7 @@ import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
-import { MessagesModule } from 'primeng/messages';
+import { Toast } from 'primeng/toast';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -25,7 +25,7 @@ import { AuthService } from '../auth.service';
     InputTextModule,
     ButtonModule,
     CardModule,
-    MessagesModule,
+    Toast,
   ],
   providers: [MessageService],
 })

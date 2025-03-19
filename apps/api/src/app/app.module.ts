@@ -3,7 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '..//auth/users/user.entity';
 import { AuthModule } from '../auth/auth.module';
 import { UserModule } from '../auth/users/user.module';
-import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
@@ -22,7 +21,7 @@ import { AppService } from './app.service';
       synchronize: true, // Если true, то TypeORM будет синхронизировать схему базы данных с кодом. ОСТОРОЖНО на продакшене!
     }),
   ],
-  controllers: [AppController],
+  controllers: [],
   providers: [AppService],
 })
 export class AppModule {}
