@@ -2,7 +2,7 @@
   "nxConsole.nxWorkspacePath": "",
   "typescript.preferences.importModuleSpecifier": "non-relative", // Автоимпорт будет использовать абсолютные пути, если возможно.
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true // Автоматически организует импорты при сохранении.
+    "source.organizeImports": "explicit"
   },
   "typescript.autoImportSuggestions.enabled": true,
   "typescript.tsdk": "node_modules/typescript/lib" // Включает автоимпорты

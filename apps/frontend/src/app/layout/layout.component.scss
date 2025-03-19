@@ -1,0 +1,25 @@
+.layout-content {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.p-sidebar {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+button.p-button {
+  margin-top: 20px;
+}
+
+/* Опционально для улучшения внешнего вида */
+.p-menubar {
+  margin-bottom: 20px;
+}

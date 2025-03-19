@@ -1,0 +1,8 @@
+/* Контейнер для центрирования */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 16px); /* Заполняет всю высоту экрана */
+  background-color: #f4f7fa; /* Фон страницы */
+}
