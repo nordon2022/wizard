@@ -54,7 +54,7 @@ export class LoginComponent {
     this.loading.set(true);
     try {
       await this.authService.login(this.loginForm.value);
-      this.router.navigate(['/main']);
+      this.router.navigate(['/']);
     } catch (error) {
       this.messageService.add({
         severity: 'error',

@@ -1,11 +1,11 @@
 import { Route } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { authRoutes } from './auth/auth.routes';
-import { LayoutComponent } from './layout/layout.component';
+import { layoutRoutes } from './layout/layout.routes';
 
 export const appRoutes: Route[] = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'main', component: LayoutComponent, canActivate: [AuthGuard] },
+  { path: '', children: layoutRoutes, canActivate: [AuthGuard] },
   ...authRoutes,
-  { path: '**', redirectTo: '/main', pathMatch: 'full' },
+
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

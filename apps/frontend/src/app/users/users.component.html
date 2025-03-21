@@ -1,0 +1,21 @@
+<p-panel header="Список пользователей" styleClass="p-mb-3">
+    <!-- Панель с таблицей пользователей -->
+    <p-table [value]="users" [paginator]="true" [rows]="5" [loading]="loading">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+                <th pSortableColumn="name">Имя <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-panel>
+
+<p *ngIf="error" class="error" style="color: red; text-align: center;">{{ error }}</p>

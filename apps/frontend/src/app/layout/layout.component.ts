@@ -18,6 +18,7 @@ export class LayoutComponent {
 
   menuItems = [
     { label: 'Главная', icon: 'pi pi-home', routerLink: '/home' },
+    { label: 'Пользователи', icon: 'pi pi-user', routerLink: '/users' },
     { label: 'Настройки', icon: 'pi pi-cog', routerLink: '/settings' },
   ];
 
