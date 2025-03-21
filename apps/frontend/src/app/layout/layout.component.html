@@ -1,0 +1,15 @@
+<p-toast></p-toast>
+
+<p-menubar [model]="menuItems" class=" pb-3">
+
+    <ng-template #end>
+        <div class="flex items-center gap-2">
+            <p-button label="Search" icon="pi pi-sign-out" label="Выйти" (onClick)="logout()" />
+        </div>
+    </ng-template>
+</p-menubar>
+<div class="layout-content mt-3">
+    <div class="content-area">
+        <router-outlet></router-outlet>
+    </div>
+</div>

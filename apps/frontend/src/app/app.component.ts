@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, ToastModule],
   selector: 'app-root',
+  providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'frontend';
+  constructor(private messageService: MessageService) {
+    this.messageService.add({
+      severity: 'info',
+      summary: 'Info',
+      detail: 'Message Content',
+      life: 3000,
+    });
+  }
 }
